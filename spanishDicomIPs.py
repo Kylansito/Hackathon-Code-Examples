@@ -7,7 +7,7 @@ import os
 from dotenv import load_dotenv
 
 # Cargar variables de entorno desde el archivo .env
-load_dotenv(dotenv_path="./Examples/apiToken.env")
+load_dotenv(dotenv_path="./Hackathon-Code-Examples/apiToken.env")
 
 # Acceder a las claves de API desde las variables de entorno
 CENSYS_API_ID = os.getenv('CENSYS_API_ID')
