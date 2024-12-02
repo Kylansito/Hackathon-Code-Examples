@@ -19,6 +19,10 @@ def search_dicom_censys_and_plot():
 
     # Define the query
     query = '(services.port: 104 or services.port: 11112) and location.country_code: ES'
+
+    # !                 IMPORTANT!
+    # ! You can also query by labels, for example:
+    # ! query = 'tags: "dicom" and location.country_code: ES' or query = 'tags: "medical-device" and location.country_code: ES'
     
     # Start the search with the first cursor
     results = censys_client.search(query, pages=0)
