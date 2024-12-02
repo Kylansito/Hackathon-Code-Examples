@@ -7,7 +7,7 @@ import os
 from dotenv import load_dotenv
 
 # Cargar variables de entorno desde el archivo .env
-load_dotenv(dotenv_path="./Hackathon-Code-Examples/apiToken.env")
+load_dotenv(dotenv_path="./apiToken.env")
 
 # Acceder a las claves de API desde las variables de entorno
 CENSYS_API_ID = os.getenv('CENSYS_API_ID')
@@ -98,7 +98,6 @@ def host_shodan(ips):
     return portsForIP
 
 if __name__ == '__main__':
-    print(CENSYS_API_ID)
     search_dicom_censys()
     print(f"Total IPs found: {len(ips)}")
     with open('dicom_ips.txt', 'w') as file:
